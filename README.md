@@ -192,7 +192,7 @@ By using BPHS in **RAG**, our app ensures that **answers are grounded in classic
 * **Models** → OpenAI GPT (for structured + synthesis), OpenAI Embeddings
 * **Database** → ChromaDB (vector database for RAG)
 * **Knowledge Base** → BPHS PDF
-* **APIs** → Google Maps API for city autocomplete
+
 
 ---
 
