@@ -117,8 +117,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-# --- Google Maps API key ---
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
 
 
 
@@ -202,8 +201,8 @@ By using BPHS in **RAG**, our app ensures that **answers are grounded in classic
 1. Clone repo
 
    ```bash
-   git clone https://github.com/your-username/astrology-career-guidance.git
-   cd astrology-career-guidance
+   git clone https://github.com/Abhay123-hub/astrology_application.git
+   cd astrology_application
    ```
 2. Install dependencies
 
