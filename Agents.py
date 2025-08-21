@@ -11,6 +11,7 @@ import json
 from output_parsers import AstroData_Pydantic,AstroData_Typed,IntentSpec_Pydantic,IntentSpec_Typed
 from PromptManager import PromptManager
 from LLMManager import Model
+import os
 
 from State import GraphState
 llm_manager = Model()
@@ -20,7 +21,8 @@ class Agent:
         self.llm_json = llm_manager.get_llm_json()
         self.llm_synth = llm_manager.get_llm_synth()
     def build_retriever(self):
-        loader = PyPDFLoader("directory\BPHS - 1 RSanthanam.pdf")
+        file_path = os.path.join("directory", "BPHS - 1 RSanthanam.pdf")
+        loader = PyPDFLoader(file_path)
         docs = loader.load()
 
         splitter = RecursiveCharacterTextSplitter(chunk_size=1200, chunk_overlap=150)
