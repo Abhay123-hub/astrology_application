@@ -1,5 +1,5 @@
 
-# 🔮 Astrology Career Guidance with RAG + Streamlit
+# 🔮 Astrology Life Guidance with RAG + Streamlit
 
 ✨ *“Bringing the ancient wisdom of astrology into the modern AI era using LangChain, LLMs, and Retrieval-Augmented Generation (RAG).”*
 
