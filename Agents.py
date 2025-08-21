@@ -21,23 +21,19 @@ class Agent:
         self.llm_json = llm_manager.get_llm_json()
         self.llm_synth = llm_manager.get_llm_synth()
     def build_retriever(self):
-        file_path = os.path.join("directory", "BPHS - 1 RSanthanam.pdf")
-        
-        loader = PyPDFLoader(file_path)
 
-       
-        docs_iter = loader.lazy_load()
-        splitter = RecursiveCharacterTextSplitter(chunk_size=1200, chunk_overlap=150)
-        chunks = []
-        for page in docs_iter:
-          page_chunks = splitter.split_documents([page])
-          chunks.extend(page_chunks)
-        vs = Chroma.from_documents(
-            documents=chunks,
-            embedding=OpenAIEmbeddings(model="text-embedding-3-large"),
-            collection_name="jyotish_rag"
-        )
-        return vs.as_retriever(search_kwargs={"k": 5})
+        ## now i am not calling the file 
+        
+        vectordb = Chroma(
+       persist_directory="chroma_db",
+    embedding_function=OpenAIEmbeddings(model="text-embedding-3-large"),
+      )
+
+        retriever = vectordb.as_retriever({"search_kwargs":5})
+
+        return retriever
+    
+   
     
     def astro_to_bullets(self,a: AstroData_Pydantic) -> str:
     
