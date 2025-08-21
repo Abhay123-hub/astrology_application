@@ -29,10 +29,9 @@ class Agent:
     embedding_function=OpenAIEmbeddings(),
       )
 
-       retriever = vectordb.as_retriever(search_kwargs={"k": 5})
+        retriever = vectordb.as_retriever(search_kwargs={"k": 5})
+
         return retriever
-    
-   
     
     def astro_to_bullets(self,a: AstroData_Pydantic) -> str:
     
