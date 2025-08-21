@@ -1,5 +1,5 @@
 
-# 🔮 Astrology Career Guidance with RAG + Streamlit
+# 🔮 Astrology Life Guidance with RAG + Streamlit
 
 ✨ *“Bringing the ancient wisdom of astrology into the modern AI era using LangChain, LLMs, and Retrieval-Augmented Generation (RAG).”*
 
@@ -117,8 +117,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-# --- Google Maps API key ---
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
 
 
 
@@ -193,7 +192,7 @@ By using BPHS in **RAG**, our app ensures that **answers are grounded in classic
 * **Models** → OpenAI GPT (for structured + synthesis), OpenAI Embeddings
 * **Database** → ChromaDB (vector database for RAG)
 * **Knowledge Base** → BPHS PDF
-* **APIs** → Google Maps API for city autocomplete
+
 
 ---
 
@@ -202,8 +201,8 @@ By using BPHS in **RAG**, our app ensures that **answers are grounded in classic
 1. Clone repo
 
    ```bash
-   git clone https://github.com/your-username/astrology-career-guidance.git
-   cd astrology-career-guidance
+   git clone https://github.com/Abhay123-hub/astrology_application.git
+   cd astrology_application
    ```
 2. Install dependencies
 

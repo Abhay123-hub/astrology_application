@@ -7,7 +7,10 @@ load_dotenv()
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5c5fa8a2ea0eba16662ae4006c9f3103fa1ab5ed
 st.title("✨🌠 AstroVision: Guiding Your Life Through the Stars 🔮🌌")
 
 
