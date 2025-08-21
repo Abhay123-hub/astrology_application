@@ -5,14 +5,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 5c5fa8a2ea0eba16662ae4006c9f3103fa1ab5ed
 st.title("✨🌠 AstroVision: Guiding Your Life Through the Stars 🔮🌌")
-
 
 # --- Name Input ---
 name = st.text_input("Enter your Name:")
@@ -23,10 +16,10 @@ dob = st.date_input("Date of Birth:", min_value=date(1900,1,1), max_value=date.t
 # --- TOB Input (time picker) ---
 tob = st.time_input("Time of Birth:", value=time(12,0))
 
-# --- Place Input with Google API Autocomplete ---
+# --- Place Input ---
 place_input = st.text_input("Enter Place of Birth:")
 
-
+# --- Question ---
 question = st.text_input(" Type your question:")
 
 # --- Submit ---
@@ -47,9 +40,11 @@ if st.button("Get Prediction"):
             "answer": None
         }
 
-        # Call your workflow
-        from workflow import Workflow
-        work = Workflow()
-        response = work.execute(inputs)
+        # Spinner while workflow executes
+        with st.spinner("🔮 Calculating your prediction... Please wait..."):
+            from workflow import Workflow
+            work = Workflow()
+            response = work.execute(inputs)
+
         st.success(response["answer"])
 
