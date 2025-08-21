@@ -22,12 +22,16 @@ class Agent:
         self.llm_synth = llm_manager.get_llm_synth()
     def build_retriever(self):
         file_path = os.path.join("directory", "BPHS - 1 RSanthanam.pdf")
+        
         loader = PyPDFLoader(file_path)
-        docs = loader.load()
 
+       
+        docs_iter = loader.lazy_load()
         splitter = RecursiveCharacterTextSplitter(chunk_size=1200, chunk_overlap=150)
-        chunks = splitter.split_documents(docs)
-
+        chunks = []
+        for page in docs_iter:
+          page_chunks = splitter.split_documents([page])
+          chunks.extend(page_chunks)
         vs = Chroma.from_documents(
             documents=chunks,
             embedding=OpenAIEmbeddings(model="text-embedding-3-large"),
