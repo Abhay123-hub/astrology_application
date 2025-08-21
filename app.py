@@ -7,8 +7,7 @@ load_dotenv()
 
 
 
-
-st.title("🔮✨ Astrology Career Guidance 🌟🚀")
+st.title("✨🌠 AstroVision: Guiding Your Life Through the Stars 🔮🌌")
 
 
 # --- Name Input ---
