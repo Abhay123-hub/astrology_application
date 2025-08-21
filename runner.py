@@ -2,10 +2,10 @@ from workflow import Workflow
 from State import GraphState
 
 inputs: GraphState = {
-    "name": "Abhay Thakur",
-    "dob": "2003-06-06",
+    "name": "lukky",
+    "dob": "20011-06-06",
     "tob": "20:00",
-    "place": "Una, Himachal Pradesh, India",
+    "place": "Hamirpur, Himachal Pradesh, India",
     "question": "how will i do overall in my career",
     "astro_data": None,
     "intent": None,
