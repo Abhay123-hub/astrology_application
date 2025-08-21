@@ -26,11 +26,10 @@ class Agent:
         
         vectordb = Chroma(
        persist_directory="chroma_db",
-    embedding_function=OpenAIEmbeddings(model="text-embedding-3-large"),
+    embedding_function=OpenAIEmbeddings(),
       )
 
-        retriever = vectordb.as_retriever({"search_kwargs":5})
-
+       retriever = vectordb.as_retriever(search_kwargs={"k": 5})
         return retriever
     
    
